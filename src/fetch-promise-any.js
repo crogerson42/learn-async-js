@@ -8,7 +8,7 @@ const fetchPromise1 = fetch(
     "file://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json",
   );
   
-  Promise.any([fetchPromise1, fetchPromise2, fetchPromise3])
+  Promise.any([fetchPromise1, fetchPromise2, fetchPromise3]) // cannot control which concurrent function resolves successfully; use when *A* response is needed
     .then((response) => {
         console.log(`${response.url}: ${response.status}`);
     })
